@@ -17,7 +17,7 @@ class Author implements \JsonSerializable
      * @param string   $bio
      * @param string[] $urls
      */
-    public function __construct(string $uuid, string $name, string $email, string $bio, array $urls)
+    public function __construct(string $uuid, string $name, string $email, string $bio, ?array $urls)
     {
         $this->uuid = $uuid;
         $this->name = $name;
@@ -38,6 +38,10 @@ class Author implements \JsonSerializable
 
     public function getShortName(): string
     {
+        if(false === strpos($this->name, ' ')){
+            return $this->name;
+        }
+        
         return trim(substr($this->name, 0, strpos($this->name, ' ')));
     }
 
@@ -56,7 +60,7 @@ class Author implements \JsonSerializable
      */
     public function getUrls(): array
     {
-        return $this->urls;
+        return $this->urls ?? [];
     }
 
     public function jsonSerialize(): array

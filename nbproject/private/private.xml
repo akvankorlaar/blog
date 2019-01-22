@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/var/www/html/blog/app/Resources/views/index.html.twig</file>
+            <file>file:/var/www/html/blog/app/Resources/views/layout.html.twig</file>
+            <file>file:/var/www/html/blog/src/Blog/BlogRepository.php</file>
+            <file>file:/var/www/html/blog/src/Controller/PostController.php</file>
+            <file>file:/var/www/html/blog/src/Entity/Blog.php</file>
+            <file>file:/var/www/html/blog/var/cache/dev/www_blog-articles.json</file>
+        </group>
+    </open-files>
+</project-private>

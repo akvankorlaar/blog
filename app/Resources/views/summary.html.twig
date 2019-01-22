@@ -4,7 +4,7 @@
         <a href="{{ path("app.post", { name : blog.slug }) }}">{{ blog.title }}</a>
     </h1>
     <p class="uk-article-meta">
-        Written by <img class="uk-border-circle" src="{{ blog.author.gravatarUrl(20) }}"> <a href="{{ path("app.author", { name : blog.author.shortname | lower }) }}">{{ blog.author.name }}</a> on {{ blog.date | date('F jS Y') }}.
+        Posted on {{ blog.date | date('F jS Y') }}.
     </p>
 
     {{ blog.summary | markdown }}

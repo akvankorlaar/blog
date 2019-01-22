@@ -7,7 +7,7 @@
         {% block meta %}
         <meta name="description" content="Development blog of Yannick de Lange and Iltar van der Berg" />
         {% endblock %}
-        <title>{% block title %}Stovepipe Systems{% endblock %}</title>
+        <title>{% block title %}Tnera{% endblock %}</title>
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="/css/uikit.min.css">
         <link rel="stylesheet" href="/css/prism.css" data-noprefix />
@@ -37,13 +37,14 @@
 
             <div class="uk-grid" data-uk-grid-margin>
                 <div class="uk-width-medium-1-1 uk-text-center uk-text-muted">
-                    Copyright &copy; 2016 stovepipe.systems
+                    Copyright &copy; 2019 tnera.org | 
+                    <a href="{{ path("app.post", { name: 'Hello World!' }) }}">About</a>
                 </div>
             </div>
 
         </div>
 
         {{ render(controller('app.controller.google_analytics:embedAction')) }}
-        <script id="dsq-count-scr" src="//devyannickl88.disqus.com/count.js" async></script>
+        <script id="dsq-count-scr" src="//tnera-org.disqus.com/count.js" async></script>
     </body>
 </html>

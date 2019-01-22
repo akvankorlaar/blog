@@ -10,7 +10,7 @@
 <article class="uk-article">
     <h1 class="uk-article-title"><a href="{{ path("app.post", { name : blog.slug }) }}">{{ blog.title }}{% if blog.draft %} (DRAFT){% endif %}</a></h1>
     <p class="uk-article-meta">
-        Written by <img class="uk-border-circle" src="{{ blog.author.gravatarUrl(20) }}"> <a href="{{ path("app.author", { name : blog.author.shortname | lower }) }}">{{ blog.author.name }}</a>{% if not blog.draft %} on {{ blog.date | date('F jS Y') }}{% endif %}.
+        Posted on {{ blog.date | date('F jS Y') }}.
     </p>
 
     {{ blog.content | markdown }}
@@ -35,7 +35,7 @@
                 (function() {  // DON'T EDIT BELOW THIS LINE
                     var d = document, s = d.createElement('script');
 
-                    s.src = '//devyannickl88.disqus.com/embed.js';
+                    s.src = '//tnera-org.disqus.com/embed.js';
 
                     s.setAttribute('data-timestamp', +new Date());
                     (d.head || d.body).appendChild(s);
