@@ -4,9 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {% block meta %}
-        <meta name="description" content="Development blog of Yannick de Lange and Iltar van der Berg" />
+        <meta name="description" content="" />
         {% endblock %}
-        <title>{% block title %}Tnera{% endblock %}</title>
+        <title>{% block title %}Arent van Korlaar{% endblock %}</title>
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="/css/uikit.min.css">
         <link rel="stylesheet" href="/css/prism.css" data-noprefix />
@@ -36,14 +36,13 @@
 
             <div class="uk-grid" data-uk-grid-margin>
                 <div class="uk-width-medium-1-1 uk-text-center uk-text-muted">
-                    Copyright &copy; 2019 tnera.org | 
-                    <a href="{{ path("app.post", { name: 'Hello World!' }) }}">About</a>
+                    arentvankorlaar.nl 2019 | 
+                    <a href="{{ path("app.post", { name: 'Hi, world' }) }}">About</a>
                 </div>
             </div>
 
         </div>
 
         {{ render(controller('app.controller.google_analytics:embedAction')) }}
-        <script id="dsq-count-scr" src="//tnera-org.disqus.com/count.js" async></script>
     </body>
 </html>

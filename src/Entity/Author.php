@@ -47,7 +47,7 @@ class Author implements \JsonSerializable
 
     public function getGravatarUrl(int $size = 200): string
     {
-        return 'https://www.gravatar.com/avatar/'.md5(strtolower($this->email)).'?s='.$size;
+        return ''; # https://www.gravatar.com/avatar/'.md5(strtolower($this->email)).'?s='.$size;
     }
 
     public function getBio(): string
