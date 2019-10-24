@@ -8,7 +8,7 @@ imports:
 parameters:
     locale: en
     blog_location: "%kernel.root_dir%/../var/blogs"
-    blog_data_file: "%%kernel.root_dir%/../var/cache/prod"
+    blog_data_file: "%kernel.cache_dir%/blogs.json"
 
 framework:
     #esi:             ~
