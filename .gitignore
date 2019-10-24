@@ -18,3 +18,4 @@
 /web/bundles/
 /composer.phar
 /app.local.conf
+/app/bootstrap.php.cache

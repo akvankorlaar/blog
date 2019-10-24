@@ -9,7 +9,6 @@
     {{ blog.content | markdown }}
 
     <p class="uk-article-meta">
-        Tags: {% for tag in blog.tags %}<a class="uk-badge" href="{{ path("app.tag", {tag : tag}) }}">{{ tag }}</a> {% endfor %}
 
     </p>
 
