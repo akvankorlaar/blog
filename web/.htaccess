@@ -28,6 +28,10 @@ DirectoryIndex app.php
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
+    # Rewrite all traffic from ip to domain
+    RewriteCond %{HTTP_HOST} ^185\.95\.13\.134$
+    RewriteRule ^(.*)$ http://www.arentvankorlaar.nl/$1 [L,R=301]
+
     # Redirect to URI without front controller to prevent duplicate content
     # (with and without `/app.php`). Only do this redirect on the initial
     # rewrite by Apache and not on subsequent cycles. Otherwise we would get an
