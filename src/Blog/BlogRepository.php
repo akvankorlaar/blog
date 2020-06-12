@@ -85,10 +85,9 @@ class BlogRepository
     public function getBlogs()
     {
         $this->load();
-        $now = new \DateTime();
 
-        return array_filter($this->blogs, function (Blog $blog) use ($now) {
-            return !$blog->isDraft() && $blog->getDate() < $now;
+        return array_filter($this->blogs, function (Blog $blog) {
+            return !$blog->isDraft();
         });
     }
 
@@ -126,9 +125,8 @@ class BlogRepository
     public function getBlogsForAuthor(Author $author)
     {
         $this->load();
-        $now = new \DateTime();
 
-        return array_filter($this->blogs, function (Blog $blog) use ($author, $now) {
+        return array_filter($this->blogs, function (Blog $blog) use ($author) {
             return $blog->getAuthor() === $author && !$blog->isDraft();
         });
     }

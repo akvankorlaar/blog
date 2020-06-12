@@ -21,6 +21,10 @@
 
     </div>
     <div class="more uk-panel uk-panel-box">
+        <h3>
+            <a href="{{ path("app.index") }}">
+            Main page
+            </a></h3>
         <h3>More posts</h3>
         {% for post in related %}
             <a href="{{ path("app.post", { name : post.slug }) }}">{{ post.title }}</a>
