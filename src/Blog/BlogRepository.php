@@ -129,7 +129,7 @@ class BlogRepository
         $now = new \DateTime();
 
         return array_filter($this->blogs, function (Blog $blog) use ($author, $now) {
-            return $blog->getAuthor() === $author && !$blog->isDraft() && $blog->getDate() < $now;
+            return $blog->getAuthor() === $author && !$blog->isDraft();
         });
     }
 
