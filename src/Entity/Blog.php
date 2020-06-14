@@ -128,6 +128,12 @@ class Blog implements \JsonSerializable
         return '/post/'.$this->slug;
     }
 
+    public function getDisqusUrl()
+    {
+        $url = '/post/'. rawurlencode($this->slug);
+        return 'https://arentvankorlaar.nl' . $url;
+    }
+
     /**
      * @return bool
      */
