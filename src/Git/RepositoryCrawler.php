@@ -155,9 +155,10 @@ class RepositoryCrawler
         $file = dirname($this->cacheDataFile).'/'.$repository->getName().'.json';
         $rootFile = $this->cacheDataFile;
         $files = array_unique(array_merge(file_exists($rootFile) ? json_decode(file_get_contents($rootFile), true) : [], [$file]));
+        $root_file_content = str_replace('pro_', 'prod', json_encode($files));
 
         file_put_contents($file, json_encode($data));
-        file_put_contents($rootFile, json_encode($files));
+        file_put_contents($rootFile, $root_file_content);
     }
 
     /**
