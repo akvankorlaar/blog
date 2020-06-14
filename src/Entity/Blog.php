@@ -134,6 +134,11 @@ class Blog implements \JsonSerializable
         return 'https://arentvankorlaar.nl' . $url;
     }
 
+    public function isWelcomePage()
+    {
+        return strpos($this->getSlug(), 'Welcome') !== false;
+    }
+
     /**
      * @return bool
      */
