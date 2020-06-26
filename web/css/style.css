@@ -58,8 +58,22 @@ blockquote {
 .header.big {
     background: url(/images/logo.png) no-repeat center center;
     display: block;
-    height: 40%;
+    height: 50%;
 }
+
+@media screen and (min-width: 2000px) {
+    .header.big {
+        background: url(/images/logo.png) no-repeat center center;
+        display: block;
+        height: 70%;
+    }
+
+    .extra-space {
+        display: block;
+        height: 70%;
+    }
+  }
+
 
 .uk-article-meta {
     color: #000;
